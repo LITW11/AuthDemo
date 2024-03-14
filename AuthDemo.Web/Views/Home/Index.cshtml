@@ -1,0 +1,17 @@
+﻿
+@model HomeViewModel
+<h1>@Model.Message</h1>
+@if(Model.User != null)
+{
+    <h2>Hello @Model.User.Name</h2>
+}
+
+<h2>Mesage from View:</h2>
+@if (User.Identity.IsAuthenticated)
+{
+    <h2>Hi logged in person :)</h2>
+}
+else
+{
+    <h2>Hello guest person</h2>
+}
